@@ -1,4 +1,4 @@
-from scraper import *
+from scraper import USC_scraper
 from education_background import education_background
 
 def main():
