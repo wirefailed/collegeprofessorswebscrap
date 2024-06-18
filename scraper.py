@@ -15,7 +15,7 @@ def USC_scraper(mainMatrix):
 
     for professor_link in allFaculty_a:
           href_URL = professor_link.find('div', class_ = 'faculty-text').find('a')['href']
-          # hashmap to only get uniquearray
+          # hashset to only get uniquearray
           if href_URL and href_URL not in unique_URLs:
                unique_URLs.append(href_URL)
                list_URL.append(href_URL)   
