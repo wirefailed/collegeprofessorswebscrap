@@ -11,8 +11,16 @@ def USC_scraper(mainMatrix):
     allFaculty_div = soup.find('div', id = 'results')
     allFaculty_a = allFaculty_div.find_all('div', class_ = 'faculty-member')
 
+    unique_URLs = set()
+
     for professor_link in allFaculty_a:
-        list_URL.append(professor_link.find('div', class_ = 'faculty-text').find('a')['href'])     
+          href_URL = professor_link.find('div', class_ = 'faculty-text').find('a')['href']
+          # hashmap to only get uniquearray
+          if href_URL and href_URL not in unique_URLs:
+               unique_URLs.append(href_URL)
+               list_URL.append(href_URL)   
+          else:
+               print(f"No href found or duplicate href: {href_URL}")  
 
     for URL in list_URL:
         mainMatrix.append(education_background('https://viterbi.usc.edu' + URL))
