@@ -23,24 +23,25 @@ def main():
     cur.execute("""CREATE TABLE IF NOT EXISTS professor (
         id SERIAL PRIMARY KEY,
         name VARCHAR(100) NOT NULL,
-        academic_title VARCHAR(100),
-    )""")
+        academic_title VARCHAR(100)
+    );""")
 
     cur.execute("""CREATE TABLE IF NOT EXISTS degrees (
         id SERIAL PRIMARY KEY,
         prof_name VARCHAR(100) NOT NULL,
         degree VARCHAR(100),
-        degree VARCHAR(100),
-        degree VARCHAR(100),
-        degree VARCHAR(100),
-        degree VARCHAR(100),
         FOREIGN KEY(prof_name) REFERENCES professor(name)
-    )""")
+    );""")
 
-    for id in range(len(USC_professors_infos)):
-        cur.execute("""INSERT INTO professor(id, name, academic title) VALUES
-        ()
-        """)
+    for i in range(len(USC_professors_infos)):
+        professor_name = USC_professors_infos[i][0]
+        professor_academic_title = USC_professors_infos[i][1]
+        cur.execute("""INSERT INTO professor(name, academic title) VALUES (%s, %s)""", 
+        (professor_name, professor_academic_title))
+        for j in range(len(USC_professors_infos[i][2])):
+            degree = USC_professors_infos[i][2][j]
+            cur.execute("""INSERT INTO degrees(prof_name, degree) VALUES(%s, %s)""",
+            (professor_name, degree))
 
     conn.commit()
 
