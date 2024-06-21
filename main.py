@@ -5,8 +5,8 @@ import psycopg2
 def main():
     USC_professors_infos = []
     USC_scraper(USC_professors_infos)
-    # sorts USC_professors_infos based off its name order
-    sorted(USC_professors_infos, key=lambda x: x[0])
+    # sorts USC_professors_infos based off their first name name order
+    sorted(USC_professors_infos, key=lambda x: x[0].split()[-1])
     
     # to check if it works 
     # for i in USC_professors_infos:
