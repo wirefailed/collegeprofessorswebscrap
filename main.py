@@ -3,7 +3,8 @@ from education_background import education_background
 
 def main():
     USC_professors_infos = []
-    USC_scraper(USC_professors_infos)
+    missedProfessors = []
+    USC_scraper(USC_professors_infos, missedProfessors)
     # sorts USC_professors_infos based off its name order
     sorted(USC_professors_infos, key=lambda x: x[0])
 

@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 from education_background import education_background 
 
-def USC_scraper(mainMatrix):
+def USC_scraper(mainMatrix, missedProfessors):
     r = requests.get("https://viterbi.usc.edu/directory/faculty/")
     list_URL = []
         
@@ -24,6 +24,8 @@ def USC_scraper(mainMatrix):
         
         # Used to check if the returned matrix is valid
         if(returnInfo == False):
+            missedProfessors.append(URL)
+            print(URL)
             continue
         else:
             mainMatrix.append(returnInfo)
