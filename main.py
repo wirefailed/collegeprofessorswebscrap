@@ -45,7 +45,7 @@ def main():
             CREATE TABLE IF NOT EXISTS degrees (
                 id SERIAL PRIMARY KEY,
                 professor_id INTEGER NOT NULL,
-                degree VARCHAR(255),
+                degree TEXT,
                 FOREIGN KEY (professor_id) REFERENCES professor(id)
             );
         """)

@@ -3,7 +3,7 @@ from getpass import getpass
 
 print("Write your password")
 passWord  = getpass()
-USC_professors_infos = ['Ali Abbas', 'Professor of Industrial and Systems Engineering and Public Policy', ['2004, Doctoral Degree, Management Science and Engineering, Stanford University', '2004, Doctoral Degree, Electrical Engineering, Stanford University', "2002, Master's Degree, Industrial Engineering, Stanford University", "1998, Master's Degree, Electrical Engineering, Stanford University"]]
+USC_professors_infos = [['Ali Abbas', 'Professor of Industrial and Systems Engineering and Public Policy', ['2004, Doctoral Degree, Management Science and Engineering, Stanford University', '2004, Doctoral Degree, Electrical Engineering, Stanford University', "2002, Master's Degree, Industrial Engineering, Stanford University", "1998, Master's Degree, Electrical Engineering, Stanford University"]]]
 
 try: 
     conn = psycopg2.connect(
@@ -29,7 +29,7 @@ try:
         CREATE TABLE IF NOT EXISTS degrees (
             id SERIAL PRIMARY KEY,
             professor_id INTEGER NOT NULL,
-            degree VARCHAR(255),
+            degree TEXT,
             FOREIGN KEY (professor_id) REFERENCES professor(id)
         );
     """)
