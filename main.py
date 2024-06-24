@@ -4,6 +4,7 @@ import psycopg2
 from getpass import getpass
 
 def main():
+
     USC_professors_infos = []
     USC_missed_professor_infos = []
     USC_scraper(USC_professors_infos, USC_missed_professor_infos)
@@ -18,7 +19,7 @@ def main():
         # print(i)
 
     print("Connecting to data base")
-    print("Write your password")
+    print("Write your PostgresSQL password")
     passWord  = getpass()
 
     try: 
