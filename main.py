@@ -44,7 +44,7 @@ def main():
         cur.execute("""
             CREATE TABLE IF NOT EXISTS degrees (
                 id SERIAL PRIMARY KEY,
-                professor_id INTEGER NOT NULL,
+                professor_name VARCHAR(100) NOT NULL,
                 degree VARCHAR(100),
                 FOREIGN KEY (professor_id) REFERENCES professor(id)
             );
