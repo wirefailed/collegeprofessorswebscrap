@@ -6,13 +6,17 @@ def main():
     USC_professors_infos = []
     USC_missed_professor_infos = []
     USC_scraper(USC_professors_infos, USC_missed_professor_infos)
+    print("Retrieving USC professors' informations")
+
     # sorts USC_professors_infos based off their first name name order
     sorted(USC_professors_infos, key=lambda x: x[0].split()[-1])
-    
+    print("Sorting Matrix in alphabethical order")
+
     # to check if it works 
     # for i in USC_professors_infos:
         # print(i)
 
+    print("Connecting to data base")
     print("What is your postgres password?")
     passWord  = input()
 
@@ -21,6 +25,7 @@ def main():
 
     cur = conn.cursor()
 
+    print("Well connected, creating or checking if table exists")
     cur.execute("""CREATE TABLE IF NOT EXISTS professor (
         id SERIAL PRIMARY KEY,
         name VARCHAR(100) NOT NULL,
@@ -34,6 +39,7 @@ def main():
         FOREIGN KEY(prof_name) REFERENCES professor(name)
     );""")
 
+    print("Inserting datas into the database")
     for i in range(len(USC_professors_infos)):
         professor_name = USC_professors_infos[i][0]
         professor_academic_title = USC_professors_infos[i][1]
@@ -48,6 +54,8 @@ def main():
 
     cur.close()
     conn.close()
+
+    print("Everything saved")
     return 0
 
 if __name__ == '__main__':
