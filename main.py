@@ -6,8 +6,7 @@ from getpass import getpass
 def main():
 
     USC_professors_infos = []
-    USC_missed_professor_infos = []
-    USC_scraper(USC_professors_infos, USC_missed_professor_infos)
+    USC_scraper(USC_professors_infos)
     print("Retrieving USC professors' informations")
 
     # sorts USC_professors_infos based off their first name name order
