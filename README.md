@@ -83,7 +83,7 @@ _Below is an example of how you can instruct your audience on installing and set
    ```
 4. Search professors' backgrounds by running `searchingalgorithm.py`
    ```zsh
-   python searchingalgorithm.py';
+   python searchingalgorithm.py'
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -104,15 +104,13 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+- [x] Install BeautifulSoup4 and psycopg2
+- [x] Go to https://viterbi.usc.edu/directory/faculty and understand its properties in HTML
+- [x] Use BeautifulSoup4 to get a list of all professors with link that accesses to their personal website
+- [x] Once again, understand how each website contains data and use BeautifulSoup4 to store in multi dimensional array
+- [x] Use psycopg2 to store the list of professors and their occupations inside one table
+- [x] Create another table that stores their degrees with foreign key that connects both tables
+- [x] Create another file that help searches professors' degrees using PostgresSQL using Join, LIKE, and etc...
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -148,7 +146,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - email@example.com
+Junsoo Kim, Phong Nguyen
 
 Project Link: [https://github.com/wirefailed/collegeprofessorswebscrap.git](https://github.com/wirefailed/collegeprofessorswebscrap.git)
 
