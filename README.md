@@ -77,14 +77,6 @@ _Below is an example of how you can instruct your audience on installing and set
    ```zsh
    git clone https://github.com/wirefailed/collegeprofessorswebscrap.git
    ```
-2. Run main.py
-   ```zsh
-   python main.py
-   ```
-4. Search professors' backgrounds by running `searchingalgorithm.py`
-   ```zsh
-   python searchingalgorithm.py'
-   ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -93,9 +85,25 @@ _Below is an example of how you can instruct your audience on installing and set
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+1. Run main.py and answer all the questions
+   ```zsh
+   python main.py
+   ```
+  
+   <img width="500" alt="Screenshot_2024-06-24_at_9 54 14_AM" src="https://github.com/wirefailed/collegeprofessorswebscrap/assets/131930750/439f9fa3-8649-4790-94ab-72654d12b885">
+   <img width="500" alt="Screenshot_2024-06-24_at_9 54 45_AM" src="https://github.com/wirefailed/collegeprofessorswebscrap/assets/131930750/ab086c91-ae43-4fa2-b64f-ae57312699e8">
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+   As shown on the image, it will store it like this on PostGresSql
+
+2. Search professors' backgrounds by running `searchingalgorithm.py`
+   ```zsh
+   python searchingalgorithm.py
+   ```
+
+   For example,
+   the result will come out like this:
+   <img width="500" alt="Screenshot 2024-06-29 at 9 47 06 PM" src="https://github.com/wirefailed/collegeprofessorswebscrap/assets/131930750/b8b5366d-f846-4ec0-b88e-4308c2e2661d">
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
