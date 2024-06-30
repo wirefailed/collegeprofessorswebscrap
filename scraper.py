@@ -31,7 +31,7 @@ def USC_scraper(mainMatrix):
             missedProfessors.append(idAndURL)
             mainMatrix.append([])
             #Uncomment to use for testing
-            print(URL)
+            # print(URL)
             id += 1
             continue
         else:

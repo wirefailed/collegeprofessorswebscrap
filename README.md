@@ -42,7 +42,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Web Scrapper for College Professor's educational background
+Web Scrapper for College Professor's educational background utilizing Python and Beautiful Soup 4. The project grabs data from a set URL, in this case the USC Viterbi faculty page and then finds all the professor's individual pages by webscraping the faculty page. Afterwards, the webscraper then scrapes each professor's individual page to college information such as name, occupation, and degrees from the individual professor. We have accounted for possible internet errors through keeping track of the URLs of professors the first run did not receive information for. The data is then stored in a local database by last name order.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -51,6 +51,7 @@ Web Scrapper for College Professor's educational background
 ### Built With
 
 Python
+Beautiful Soup 4
 PostgresSQL
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
