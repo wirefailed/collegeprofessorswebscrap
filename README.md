@@ -93,16 +93,15 @@ _Below is an example of how you can instruct your audience on installing and set
    <img width="500" alt="Screenshot_2024-06-24_at_9 54 14_AM" src="https://github.com/wirefailed/collegeprofessorswebscrap/assets/131930750/439f9fa3-8649-4790-94ab-72654d12b885">
    <img width="500" alt="Screenshot_2024-06-24_at_9 54 45_AM" src="https://github.com/wirefailed/collegeprofessorswebscrap/assets/131930750/ab086c91-ae43-4fa2-b64f-ae57312699e8">
 
-   As shown on the image, it will store it like this on PostGresSql
+   As shown on the image, it will store it like this on PostgresSql
 
 2. Search professors' backgrounds by running `searchingalgorithm.py`
    ```zsh
    python searchingalgorithm.py
    ```
 
-   For example,
-   the result will come out like this:
-   <img width="500" alt="Screenshot 2024-06-29 at 9 47 06 PM" src="https://github.com/wirefailed/collegeprofessorswebscrap/assets/131930750/b8b5366d-f846-4ec0-b88e-4308c2e2661d">
+   For example, the result will come out like this:
+<img width="500" alt="Screenshot 2024-06-29 at 9 47 06 PM" src="https://github.com/wirefailed/collegeprofessorswebscrap/assets/131930750/b8b5366d-f846-4ec0-b88e-4308c2e2661d">
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
